@@ -50,6 +50,22 @@ updateinput(input)
            <button className="btn" onClick={() =>   this.additem(this.state.newitem)}>add disasters </button>
            <div className="list">
              <ul>
+               {this.state.list.map(item => {
+                 return(
+                   <li key={item.id}>
+                     <input
+                     type="checkbox"
+                     name="idDone"
+                     checked={item.isDOne}
+                     onChange={()=>{}}/>
+                     {item.value}
+                     <button
+                     className="btn"
+                     onClick={()=> this.deleteitem(item.id)}
+                     >Delete</button>
+                     </li>
+                 )
+               })}
                <li> <input type="Checkbox"  />avalanche</li>
                <button className="btn">Delete</button>
                
